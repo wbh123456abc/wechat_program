@@ -1,0 +1,6 @@
+.hello{
+  font-size: 50rpx;
+  
+  color: red;
+  
+  }
