@@ -35,6 +35,7 @@ async function calldp(dis){
         mon:dis.mon
       }
     }).then(res=>{
+      //console.log(res)
       resolve(res)
     })
   })
@@ -87,7 +88,10 @@ async function route(pos, mon, t,page){
     disarray.push(dis)
   }
   console.log(disarray)
+  //console.log(mon)
+  //console.log(t)
   var route = await calldp({dis:disarray, mon:mon, t:t})
+  //console.log(route)
   return route.result
 }
 Page({
