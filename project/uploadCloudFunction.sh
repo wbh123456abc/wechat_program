@@ -1,0 +1,1 @@
+"/Applications/wechatwebdevtools.app/Contents/MacOS/cli" cloud functions deploy --e cloud1-0glb2gl912b87655 --n quickstartFunctions --r --project "/Users/dqh/Desktop/未命名文件夹" --report_start --report
