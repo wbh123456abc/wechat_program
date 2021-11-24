@@ -275,7 +275,7 @@ Page({
     console.log("start");
     console.log(this.data.location.lat)
     console.log(this.data.location.lon)
-    route({latitude:this.data.dizhi.lat, longitude:this.data.dizhi.lon}, this.data.money, this.data.time,this).then(res=>{
+    route({latitude:this.data.dizhi.lat, longitude:this.data.dizhi.lon}, Number(this.data.money), Number(this.data.time),this).then(res=>{
       console.log(res)
 
       console.log(res[0].lat)

@@ -73,7 +73,7 @@ async function route(pos, mon, t,page){
   var jingdian = await calladd({name:'jingdiandz', id:'fa24ce1a61923f9d06b8949d1813e775'})
   jingdian = jingdian.result.data.list
   var disarray = new Array()
-  for(var i = 0; i < 10; i++)
+  for(var i = 0; i < 100; i++)
   {
     var dic = jingdian[i]
     var p = [{latitude:dic.lat, longitude:dic.lng}]
@@ -229,6 +229,30 @@ Page({
   func:function()
   {
     var i = this.data.i
+    if(i == this.data.answer.length)
+    {
+       wx.showModal({
+          title: '提示',
+          content: '行程已结束',
+          success: function (res) {
+            if (res.confirm) {//这里是点击了确定以后
+              console.log("queding")
+              return
+            } 
+            else {//这里是点击了取消以后
+              console.log("quxiao");
+              return
+            }
+          }
+        })
+    }
+    else{
+      this.next()
+    }
+  },
+  next:function()
+  {
+    var i = this.data.i
     if(i == 0)
     {
       this.setData({
@@ -285,6 +309,7 @@ Page({
         aans:true,
         answer:res
       })
+      wx.setStorageSync('plan', res); //将openid存入本地缓存
       var plan = "";
       for(var i = 0; i < res.length - 1; ++i)
       {

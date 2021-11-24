@@ -3,10 +3,15 @@
 var app = getApp();
 Page({
   data: {
+    canIUseOpenData:false,
+    canIUseGetUserProfile: false,
     remind: '加载中',
     angle: 0,
     year: 2021,
-    userInfo: {}
+    userInfo: {},
+    ans:false,
+    name:"请登陆",
+    fun:"fuck"
   },
 
   goToIndex: function () {
@@ -14,21 +19,27 @@ Page({
       url: '/pages/main',
     });
   },
+  
   onLoad: function () {
-   
+    console.log(this.data.canIUseOpenData)
+  },
+  fuck:function()
+  {
+    wx.getUserProfile({
+      desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+      success: (res) => {
+        console.log(res)
+        this.setData({
+          userInfo: res.userInfo,
+          ans:true,
+          name:res.userInfo.nickName,
+          fun:"goToIndex"
+        })
+      }
+    })
   },
   onShow: function () {
-    let userInfo = wx.getStorageSync('userInfo')
-    var _this = this;
-    if (!userInfo) {
-      wx.navigateTo({
-        url: "/pages/authorize/authorize"
-      })
-    } else {
-      _this.setData({
-        userInfo: userInfo
-      })
-    }
+    
   },
   onReady: function () {
     var _this = this;

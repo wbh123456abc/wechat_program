@@ -8,21 +8,12 @@ polyline="{{polyline}}"
 show-location
 >
 </map>
+
+
 </view>
-<view wx:if="{{aans == true}}">
 <view class = "page">
-  
  <view class="mybutton" bindtap = 'func'>
   <button > {{s}} </button>
   </view>
   <text>{{plan}}</text>
-</view>
-</view>
-<view wx:elif="{{aans == false}}">
-  <progress percent="{{(ans+1)-1}}" show-info  stroke-width="5"/>
-  <view class = "page">
-  <view class="mybutton">
-        <button >waiting</button>
-  </view>
-</view>
 </view>

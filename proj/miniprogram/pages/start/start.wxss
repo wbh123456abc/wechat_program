@@ -1,4 +1,5 @@
 /**start.wxss**/
+
 .container {
   background: #118fff;
   align-items: stretch;

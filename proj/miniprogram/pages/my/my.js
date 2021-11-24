@@ -5,27 +5,66 @@ Page({
    * 页面的初始数据
    */
   data: {
-      num:"10",
+      plan:"",
       ans:false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
+  
   onLoad: function (options) {
-
     var that = this
-    setTimeout(function()
+    wx.getLocation({
+      type:"gcj02",
+      success:function(res)
+      {
+        that.setData({
+          location:{
+            lat:res.latitude,
+            lon:res.longitude
+          }
+        })
+        console.log(that.data.location.lat)
+        console.log(that.data.location.lon)
+      }
+    })
+    var plan = wx.getStorageSync('plan');
+    if(plan)
     {
-      that.setData({
-        num: "80"
-      })
-    },2000)
+        this.setData({
+          plan:plan,
+          ans:true,
+        })
+    }
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
+  func:function()
+  {
+    if(!this.data.ans)
+    {
+      wx.showModal({
+        title: '提示',
+        content: '请先选取路线',
+        success: function (res) {
+          if (res.confirm) {//这里是点击了确定以后
+            console.log("queding")
+          } 
+          else {//这里是点击了取消以后
+            console.log(quxiao);
+          }
+        }
+      })
+    }
+    else{
+      wx.navigateTo({
+        url: '../plan/plan',
+      })
+    }
+  },
   onReady: function () {
 
   },

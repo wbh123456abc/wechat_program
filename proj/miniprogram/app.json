@@ -16,7 +16,8 @@
     "pages/authorize/authorize",
     "pages/main",
     "pages/my/my",
-    "pages/daohang/daohang"
+    "pages/daohang/daohang",
+    "pages/plan/plan"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -33,17 +34,20 @@
     "list": [
       {
         "pagePath": "pages/main",
-        "iconPath": "images/wechat.png",
-        "selectedIconPath": "images/wechatHL.png",
+        "iconPath": "images/大受震撼.jpg",
+        "selectedIconPath": "images/大受震撼.jpg",
         "text": "首页"
       },
       {
         "pagePath": "pages/my/my",
-        "iconPath": "images/wechat.png",
-        "selectedIconPath": "images/wechatHL.png",
+        "iconPath": "images/大受震撼.jpg",
+        "selectedIconPath": "images/大受震撼.jpg",
         "text": "我的"
       }
     ]
+  },
+  "networkTimeout": {
+    "request": 600000
   },
   "permission": {
     "scope.userLocation": {

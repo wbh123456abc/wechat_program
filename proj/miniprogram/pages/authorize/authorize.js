@@ -19,12 +19,14 @@ Page({
   },
 
   bindGetUserInfo: function (e) {
+    console.log(e)
     if (!e.detail.userInfo) {
       return;
     }
     wx.setStorageSync('userInfo', e.detail.userInfo)
     //this.signupAndLogin();
     //调用API从本地缓存中获取数据
+
       var value = wx.getStorageSync('user_openid')
       if (value) {
       } else {
