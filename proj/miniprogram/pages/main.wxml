@@ -3,21 +3,14 @@
         <text class="page__title">旅游个性化设计</text>
         <text class="page__desc">PKU软工小组</text>
     </view>
-    <view class="p">
-            <view class="section">
+            <view class="p1">
                 <input   placeholder="请输入预计旅游时间" type = "number" bindinput = 'func_time' />
             </view>
-    </view>
-    <view class="p">
-            <view class="section">
+            <view class="p2">
                 <input  placeholder="请输入预算" type = "number"bindinput = 'func_money' />
             </view>
-    </view>
-    <view class="page__bd">
+
         <view class="btn-area">
-            <view class="button-wrapper" bindtap = 'func_confirm'>
-                <button > confirm </button>
-            </view>
+            <button  type = "primary" bindtap ="func_confirm"> confirm </button>
         </view>
-    </view>
 </view>

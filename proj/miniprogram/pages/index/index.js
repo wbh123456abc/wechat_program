@@ -19,7 +19,7 @@ const category = '生活服务,娱乐休闲';
       lat:"",
       lon:""
     },
-    ans:"true"
+    ans:"false"
    },
   onLoad:function(options)
   {
@@ -58,7 +58,7 @@ const category = '生活服务,娱乐休闲';
             console.log("queding")
           } 
           else {//这里是点击了取消以后
-            console.log(quxiao);
+            console.log("quxiao");
           }
         }
       })

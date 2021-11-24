@@ -35,6 +35,7 @@ async function calldp(dis){
         mon:dis.mon
       }
     }).then(res=>{
+      //console.log(res)
       resolve(res)
     })
   })
@@ -87,7 +88,10 @@ async function route(pos, mon, t,page){
     disarray.push(dis)
   }
   console.log(disarray)
+  //console.log(mon)
+  //console.log(t)
   var route = await calldp({dis:disarray, mon:mon, t:t})
+  //console.log(route)
   return route.result
 }
 Page({
@@ -271,7 +275,7 @@ Page({
     console.log("start");
     console.log(this.data.location.lat)
     console.log(this.data.location.lon)
-    route({latitude:this.data.dizhi.lat, longitude:this.data.dizhi.lon}, this.data.money, this.data.time,this).then(res=>{
+    route({latitude:this.data.dizhi.lat, longitude:this.data.dizhi.lon}, Number(this.data.money), Number(this.data.time),this).then(res=>{
       console.log(res)
 
       console.log(res[0].lat)

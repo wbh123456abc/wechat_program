@@ -11,27 +11,18 @@ show-location
 </view>
 <view wx:if="{{aans == true}}">
 <view class = "page">
-  <view class="page__bd">
-            <view class="btn-area">
-                <view class="button-wrapper" bindtap = 'func'>
-                    <button > {{s}} </button>
-                </view>
-            </view>
+  
+ <view class="mybutton" bindtap = 'func'>
+  <button > {{s}} </button>
   </view>
-  <view class = "hello">
   <text>{{plan}}</text>
-  </view>
 </view>
 </view>
-<view wx:elif="{{aans == false}}" class="progress-box">
-  <progress percent="{{(ans+1)*10-1}}" show-info  stroke-width="5"/>
+<view wx:elif="{{aans == false}}">
+  <progress percent="{{(ans+1)-1}}" show-info  stroke-width="5"/>
   <view class = "page">
-  <view class="page__bd">
-            <view class="btn-area">
-                <view class="button-wrapper">
-                    <button >稍安勿躁，慢慢等待</button>
-                </view>
-            </view>
+  <view class="mybutton">
+        <button >waiting</button>
   </view>
 </view>
 </view>
