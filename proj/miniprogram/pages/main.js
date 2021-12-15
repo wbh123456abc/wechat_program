@@ -80,7 +80,7 @@ Page({
           }
         })
       }
-      else if(Number(this.data.time) > 2)
+      else if(Number(this.data.time) > 20)
       {
         wx.showModal({
           title: '提示',
@@ -121,7 +121,7 @@ Page({
 
 
 
-      else if(Number(this.data.money)> 3000)
+      else if(Number(this.data.money)> 20000)
       {
         wx.showModal({
           title: '提示',

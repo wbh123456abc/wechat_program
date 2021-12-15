@@ -28,7 +28,7 @@ async function calladd(p){
 async function calldp(dis){
   return new Promise(function(resolve,reject){
     wx.cloud.callFunction({
-      name:'dp',
+      name:'greed',
       data:{
         dis:dis.dis,
         t:dis.t,
@@ -71,7 +71,7 @@ async function getdis(from,to){
 }
 async function route(pos, mon, t,page){
 
-  var jingdian = await calladd({name:'jingdiandz', id:'fa24ce1a61923f9d06b8949d1813e775'})
+  var jingdian = await calladd({name:'jingdiandz', id:'dizhi'})
   jingdian = jingdian.result.data.list
   var disarray = new Array()
   for(var i = 0; i < 10; i++)
