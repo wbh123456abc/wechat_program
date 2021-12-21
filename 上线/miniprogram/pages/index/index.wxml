@@ -1,0 +1,8 @@
+<view class = "page">
+    <view class="mybutton" bindtap = 'f'>
+        <button > 选取初始地点 </button>
+    </view>
+    <view class="mybutton2" bindtap = 'g'>
+        <button > 生成旅游路线 </button>
+    </view>
+</view>

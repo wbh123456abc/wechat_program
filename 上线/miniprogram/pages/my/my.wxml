@@ -1,0 +1,3 @@
+<view class="mybutton">
+    <button  type = "primary" bindtap ="func"> 我的路线 </button>
+</view>

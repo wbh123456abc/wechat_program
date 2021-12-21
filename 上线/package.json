@@ -1,0 +1,19 @@
+{
+  "name": "fuck",
+  "version": "1.0.0",
+  "description": "这是云开发的快速启动指引，其中演示了如何上手使用云开发的三大基础能力：",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "miniprogram-sm-crypto": "^0.3.7"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3",
+    "mochawesome": "^7.0.1"
+  }
+}
