@@ -134,7 +134,7 @@ Page({
       time:pre.data.time,
       money:pre.data.money,
       dizhi:pre.data.dizhi,
-      location:pre.data.location,
+      location:pre.data.dizhi,
       first:pre.data.location
     })
     

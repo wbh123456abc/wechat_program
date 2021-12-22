@@ -10,8 +10,8 @@ Page({
     year: 2021,
     userInfo: {},
     ans:false,
-    name:"请登陆",
-    fun:"fuck"
+    name:"进入",
+    fun:"goToIndex"
   },
 
   goToIndex: function () {

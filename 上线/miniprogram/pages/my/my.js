@@ -44,26 +44,26 @@ Page({
    */
   func:function()
   {
-    if(!this.data.ans)
-    {
-      wx.showModal({
-        title: '提示',
-        content: '请先选取路线',
-        success: function (res) {
-          if (res.confirm) {//这里是点击了确定以后
-            console.log("queding")
-          } 
-          else {//这里是点击了取消以后
-            console.log(quxiao);
-          }
-        }
-      })
-    }
-    else{
-      wx.navigateTo({
-        url: '../plan/plan',
-      })
-    }
+    // if(!this.data.ans)
+    // {
+    //   wx.showModal({
+    //     title: '提示',
+    //     content: '请先选取路线',
+    //     success: function (res) {
+    //       if (res.confirm) {//这里是点击了确定以后
+    //         console.log("queding")
+    //       } 
+    //       else {//这里是点击了取消以后
+    //         console.log(quxiao);
+    //       }
+    //     }
+    //   })
+    // }
+    // else{
+    //   wx.navigateTo({
+    //     url: '../plan/plan',
+    //   })
+    // }
   },
   onReady: function () {
 

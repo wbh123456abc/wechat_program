@@ -26,20 +26,20 @@ Page({
     func_confirm:function()
     {
       var that = this;
-      wx.getLocation({
-        type:"gcj02",
-        success:function(res)
-        {
-          that.setData({
-            location:{
-              lat:res.latitude,
-              lon:res.longitude
-            }
-          })
-          console.log(that.data.location.lat)
-          console.log(that.data.location.lon)
-        }
-      })
+      // wx.getLocation({
+      //   type:"gcj02",
+      //   success:function(res)
+      //   {
+      //     that.setData({
+      //       location:{
+      //         lat:res.latitude,
+      //         lon:res.longitude
+      //       }
+      //     })
+      //     console.log(that.data.location.lat)
+      //     console.log(that.data.location.lon)
+      //   }
+      // })
   
 
       if(!Number.isInteger(Number(this.data.time)))

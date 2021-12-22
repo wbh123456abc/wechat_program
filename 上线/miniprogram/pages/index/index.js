@@ -25,9 +25,9 @@ const category = '生活服务,娱乐休闲';
   {
     var pages = getCurrentPages();
     var pre = pages[pages.length-2];
-    this.setData({
-      location:pre.data.location,
-    })
+    // this.setData({
+    //   location:pre.data.location,
+    // })
     console.log(this.data.location)
     this.setData({
       time:options.time,
